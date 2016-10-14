@@ -1,9 +1,0 @@
-Order is:
-
-* PRELIMS
-* INTRO
-* OBSERV
-* PTHEORY
-* DERIV
-* ANALYTIC
-* BINOM
