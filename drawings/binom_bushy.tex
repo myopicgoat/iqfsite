@@ -1,0 +1,24 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}
+\usetikzlibrary{arrows,shapes} % tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth',node distance=1.5cm, thick]
+	\node (A)	[draw] {};
+	\node (Ba)	[draw,above right of=A,yshift=-.3cm]{};
+	\node (Bb)	[draw,below right of=A,yshift=+.3cm]{};
+	\node (Caa)	[draw,above right of=Ba,yshift=-.5cm]{};
+	\node (Cab)	[draw,right of=Ba,yshift=-.4cm,xshift=-.4cm]{};
+	\node (Cba) [draw,right of=Bb,yshift=+.4cm,xshift=-.4cm]{};
+	\node (Cbb) [draw,below right of=Bb,yshift=+.5cm]{};
+	\path
+	(A) edge (Ba)
+	(A) edge (Bb)
+	(Ba) edge (Caa)
+	(Ba) edge (Cab)
+	(Bb) edge (Cba)
+	(Bb) edge (Cbb)
+	;
+\end{tikzpicture}
+
+\end{document}

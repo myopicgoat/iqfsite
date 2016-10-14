@@ -1,0 +1,23 @@
+\documentclass[crop,tikz,multi=false]{standalone}
+\usetikzlibrary{arrows,shapes} % tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[->,>=stealth',node distance=1.5cm, thick, color=white]
+	\node (A) {$S_{0}$};
+	\node (B)	[above right of=A,xshift=0.3cm,yshift=-.4cm] 	{$uS_{0}$};
+	\node (C) 	[below right of=A,xshift=0.3cm,yshift=.4cm] 	{$dS_{0}$};
+	\node (P1) [right of=A]{};
+	\node (Phi) [right of=P1]{$\Phi_{r}$};
+	\node (D) 	[right of=Phi]{$1$};
+	\node (E)	[right of=D]{$V_{0}$};
+	\node (F)	[above right of=E,xshift=0.3cm,yshift=-.4cm]{$V_{u}$};
+	\node (G)	[below right of=E,xshift=0.3cm,yshift=.4cm]{$V_{d}$};
+	\path 
+	(A) edge	(B)
+	(A) edge	(C)
+	(Phi) edge (D)
+	(E) edge (F)
+	(E) edge (G)
+	;
+\end{tikzpicture}
+\end{document}

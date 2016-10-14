@@ -1,0 +1,14 @@
+\documentclass[crop,tikz]{standalone}
+\usetikzlibrary{arrows,shapes} % tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+\begin{tikzpicture}[->,>=stealth',node distance=1.5cm, thick,color=white]
+	\node (A) {$\alpha S_{0}+\beta \Phi_{r}$};
+	\node (B)	[above right of=A,xshift=1.5cm,yshift=-.4cm] 	{$\alpha uS_{0} + \beta$};
+	\node (C) 	[below right of=A,xshift=1.5cm,yshift=.4cm] 	{$\alpha dS_{0}+ \beta$};
+	\path 
+	(A) edge	(B)
+	(A) edge	(C)
+	;
+\end{tikzpicture}\end{document}
+\end{document}

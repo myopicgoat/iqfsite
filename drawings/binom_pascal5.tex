@@ -1,0 +1,24 @@
+\documentclass[crop,tikz,convert={outext=.svg,command=\unexpanded{pdf2svg \infile\space\outfile}},multi=false]{standalone}
+\usetikzlibrary{arrows,shapes} % tikz package already loaded by 'tikz' option
+\makeatletter
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth',node distance=.5cm, thick]
+	\node(l0){$1$};
+	\node(l1a)[below left of=l0]{$1$};
+	\node(l1b)[below right of=l0]{$1$};
+	\node(l2a)[below left of=l1a]{$1$};
+	\node(l2b)[below right of=l1a]{$2$};
+	\node(l2c)[below right of=l1b]{$1$};
+	\node(l3a)[below left of=l2a]{$1$};
+	\node(l3b)[below right of=l2a]{$3$};
+	\node(l3c)[below right of=l2b]{$3$};
+	\node(l3d)[below right of=l2c]{$1$};
+	\node(l4a)[below left of=l3a]{$1$};
+	\node(l4b)[below right of=l3a]{$4$};
+	\node(l4c)[below right of=l3b]{$6$};
+	\node(l4d)[below right of=l3c]{$4$};
+	\node(l4e)[below right of=l3d]{$1$};
+\end{tikzpicture}
+
+\end{document}
